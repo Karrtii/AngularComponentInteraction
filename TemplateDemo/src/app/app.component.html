@@ -1,0 +1,37 @@
+
+<!--Binding-->
+<!--Interpolation-->
+<h1>{{pageTitle}}</h1>
+<div>
+  <img src="imgUrl" alt="Image">
+</div>
+
+<!--Event handling-->
+<div>
+  <button (click)="incrementCount()">increment</button>
+  <p>Clicked {{count}} times</p>
+</div>
+
+<!--Two way binding-->
+<div>
+  <input type="text" [(ngModel)]="name">
+  <p>Welcome {{name}}</p>
+</div>
+
+<!--Split two way binding-->
+<div>
+  <input type="text" [ngModel]="username" (ngModelChange)="greetKratos($event)">
+  <p>Welcome {{username}}</p>
+</div>
+
+<!--Getter and setters-->
+<div>
+  <input type="text" [(ngModel)]="customerName">
+  <p>Welcome {{customerName}}</p>
+</div>
+
+<!--ViewChild decorator-->
+<div>
+  <input #anotherNameRef type="text" [(ngModel)]="anotherName">
+  <p>Welcome {{anotherName}}</p>
+</div>
